@@ -1,0 +1,8 @@
+{
+  "short_name": "meme-generator",
+  "name": "meme generator in React.js",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
