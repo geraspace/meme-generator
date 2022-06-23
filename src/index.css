@@ -166,20 +166,6 @@ img {
   padding: 20px 10px 10px 10px;
 }
 
-@media only screen and (max-width: 912px) {
-  .form_inputs{
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 912px) {
-  .form_input{
-    width: 70vw !important;
-    height: 8vw !important;
-    font-size: 5vw !important;
-  }
-}
-
 @media only screen and (max-width: 600px) {
   .form_input{
     width: 60vw !important;
@@ -204,6 +190,26 @@ img {
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .form_image{
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .form_inputs{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .form_input{
+    width: 70vw !important;
+    height: 8vw !important;
+    font-size: 5vw !important;
+  }
+}
+
 @media only screen and (max-width: 912px) {
   .form_button{
     min-height: 5vw !important;
@@ -214,37 +220,35 @@ img {
 
 @media only screen and (max-width: 912px) {
   .form_image{
-    height: 70% !important;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .form_image{
-    height: 90% !important;
+    width: 70% !important;
+    margin: 10px !important;
   }
 }
 
 @media only screen and (max-width: 912px) {
   .form_image_container{
-    margin: 50px !important;
+    margin: 20px !important;
   }
 }
 
 @media only screen and (max-width: 912px) {
   .form_image_top_text, .form_image_bottom_text{
-    font-size: calc(60px + 2vw) !important;
+    font-size: calc(30px + 2vw) !important;
+    margin: 10px 150px !important;
   }
 }
 
 @media only screen and (max-width: 450px) {
   .form_image_top_text, .form_image_bottom_text{
-    font-size: calc(35px + 2vw) !important;
+    font-size: calc(15px + 2vw) !important;
+    margin: 10px 55px !important;
   }
 }
 
 @media only screen and (max-width: 300px) {
   .form_image_top_text, .form_image_bottom_text{
-    font-size: calc(20px + 2vw) !important;
+    font-size: calc(10px + 2vw) !important;
+    margin: 10px 40px !important;
   }
 }
 
@@ -292,27 +296,29 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative
+  position: relative;
 }
 
 .form_image{
-  height: 42vw;
+  width: 35vw;
 }
 
 .form_image_top_text{
+  margin: 0 35vw;
   position: absolute;
   font-family: Heebo;
   color: white;
-  font-size: calc(40px + 2vw);
+  font-size: calc(25px + 2vw);
   top:10px;
   text-shadow: 4px 4px 4px black;
 }
 
 .form_image_bottom_text{
+  margin: 0 30vw;
   position: absolute;
   font-family: Heebo;
   color: white;
-  font-size: calc(40px + 2vw);
+  font-size: calc(25px + 2vw);
   bottom: 10px;
   text-shadow: 4px 4px 4px black;
 }
