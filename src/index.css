@@ -1,0 +1,324 @@
+/* NAVBAR FONT TITLE */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* END NAVBAR FONT TITLE*/
+
+/* FORM FONT TITLE */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+/* END FORM FONT TITLE*/
+
+/* MEME FONT TITLE */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+/* END MEME FONT TITLE */
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+/* STYLES RESET */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* END STYLES RESET */
+
+/* < NAVBAR > */
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 100px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar_title {
+  font-family: "Press Start 2P";
+  font-size: calc(10px + 2vw);
+  color: white;
+  -webkit-text-stroke: 1px black;
+  margin: 0 0 0 20px;
+}
+
+.navbar_logo {
+  border-radius: 5px;
+  height: 5vw;
+  max-height: 100px;
+  min-height: 70px;
+}
+
+.navbar_title:hover{
+  font-size: calc(15px + 2vw);
+  transition: font-size 0.1s;
+}
+.navbar_title:not(:hover){
+  font-size: calc(10px + 2vw);
+  transition: font-size 0.1s;
+}
+
+/* NYAN CATS AND ANIMATIONS */
+.navbar_nyan_right{
+  height: 5vw;
+  position: absolute;
+  right: 1vw;
+  bottom: 25%;
+}
+
+.navbar_nyan_left{
+  height: 5vw;
+  position: absolute;
+  left: 1vw;
+  bottom: 25%;
+}
+
+.child {
+  align-self: flex-end;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.bounce_left {
+  animation-name: bounce_left;
+  animation-timing-function: ease;
+}
+
+.bounce_right {
+  animation-name: bounce_right;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce_left {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateX(-50px); }
+  50% { transform: translateY(0); }
+  100%  { transform: translateX(0); }
+}
+
+@keyframes bounce_right {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateX(50px); }
+  50% { transform: translateY(0); }
+  100%  { transform: translateX(0); }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar_nyan_left, .navbar_nyan_right {
+    opacity: 0;
+  }
+}
+
+/* END NYAN CATS AND ANIMATIONS */
+
+/* < END NAVBAR > */
+
+.form_inputs{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 10px 10px 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .form_input{
+    width: 60vw !important;
+    height: 10vw !important;
+    font-size: 3vw !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .form_input{
+    width: 80vw !important;
+    height: 12vw !important;
+    font-size: 4vw !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .form_button{
+    min-height: 10vw !important;
+    min-width: 50vw !important;
+    font-size: 5vw !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .form_image{
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .form_inputs{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .form_input{
+    width: 70vw !important;
+    height: 8vw !important;
+    font-size: 5vw !important;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .form_button{
+    min-height: 5vw !important;
+    min-width: 50vw !important;
+    font-size: 5vw !important;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .form_image{
+    width: 70% !important;
+    margin: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .form_image_container{
+    margin: 20px !important;
+  }
+}
+
+@media only screen and (max-width: 912px) {
+  .form_image_top_text, .form_image_bottom_text{
+    font-size: calc(30px + 2vw) !important;
+    margin: 10px 150px !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .form_image_top_text, .form_image_bottom_text{
+    font-size: calc(15px + 2vw) !important;
+    margin: 10px 55px !important;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .form_image_top_text, .form_image_bottom_text{
+    font-size: calc(10px + 2vw) !important;
+    margin: 10px 40px !important;
+  }
+}
+
+.form_input{
+  width: 30vw;
+  height: 4vw;
+  border-radius: 10px;
+  font-family: "Indie Flower";
+  font-size: 2vw;
+  padding: 10px;
+}
+
+.form_button{
+  width: 20vw;
+  min-width: 100px;
+  min-height: 4vw;
+  opacity: 0.6;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to left,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Indie Flower";
+  font-size: 2vw;
+  color: white;
+}
+
+.form_button:active{
+  opacity: 1;
+}
+
+.form_image_container{
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.form_image{
+  width: 50vw;
+}
+
+.form_image_top_text{
+  margin: 0 35vw;
+  position: absolute;
+  font-family: Heebo;
+  color: white;
+  font-size: calc(20px + 2vw);
+  top:10px;
+  text-shadow: 4px 4px 4px black;
+}
+
+.form_image_bottom_text{
+  margin: 0 30vw;
+  position: absolute;
+  font-family: Heebo;
+  color: white;
+  font-size: calc(20px + 2vw);
+  bottom: 10px;
+  text-shadow: 4px 4px 4px black;
+}
