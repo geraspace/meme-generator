@@ -300,7 +300,7 @@ img {
 }
 
 .form_image{
-  width: 35vw;
+  width: 50vw;
 }
 
 .form_image_top_text{
@@ -308,7 +308,7 @@ img {
   position: absolute;
   font-family: Heebo;
   color: white;
-  font-size: calc(25px + 2vw);
+  font-size: calc(20px + 2vw);
   top:10px;
   text-shadow: 4px 4px 4px black;
 }
@@ -318,7 +318,7 @@ img {
   position: absolute;
   font-family: Heebo;
   color: white;
-  font-size: calc(25px + 2vw);
+  font-size: calc(20px + 2vw);
   bottom: 10px;
   text-shadow: 4px 4px 4px black;
 }

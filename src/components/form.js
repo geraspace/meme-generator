@@ -1,24 +1,28 @@
 import React from "react";
 import { useState } from "react";
-import memesData from "../data/memesData.js";
 
 export default function Form() {
 
   // All data state
-  const [allMemeImages, setAllMemeImages] = React.useState(memesData);
+  const [allMemes, setAllMemes] = React.useState([]);
 
-  let randomMemeUrl;
+  // Meme state
   const [meme, setMeme] = useState({
     topText: "",
     bottomText: "",
-    randomImage: "https://i.imgflip.com/30b1gx.jpg",
+    randomImage: "",
   });
 
+  React.useEffect(function () {
+    fetch("https://api.imgflip.com/get_memes")
+      .then((res) => res.json())
+      .then((data) => setAllMemes(data.data.memes));
+  }, []);
+
   function handleClick() {
-    const memesArray = allMemeImages.data.memes;
-    const randomMemeIndex = Math.floor(Math.random() * memesArray.length);
-    const randomMemeObject = memesArray[randomMemeIndex];
-    randomMemeUrl = randomMemeObject.url;
+    const randomMemeIndex = Math.floor(Math.random() * allMemes.length);
+    const randomMemeObject = allMemes[randomMemeIndex];
+    const randomMemeUrl = randomMemeObject.url;
     setMeme((prevMeme) => {
       return {
         ...meme,
@@ -28,26 +32,25 @@ export default function Form() {
   }
 
   function handleChange(event) {
-    setMeme(prevState => {
-      return{
+    setMeme((prevState) => {
+      return {
         ...prevState,
-        [event.target.name]: event.target.value
-      }
+        [event.target.name]: event.target.value,
+      };
     });
   }
 
   return (
     <div className="form">
       <div className="form_inputs">
-
         <input
           name="topText"
           onChange={handleChange}
           className="form_input"
           placeholder="Above"
-          // Controlled components - React is controlling the value, not just mirroring it. 
+          // Controlled components - React is controlling the value, not just mirroring it.
           value={meme.topText}
-          ></input>
+        ></input>
 
         <input
           name="bottomText"
@@ -58,7 +61,7 @@ export default function Form() {
         ></input>
 
         <button onClick={handleClick} className="form_button">
-          Change template
+          {meme.randomImage==="" ? "randomize" : "Change template"}
         </button>
       </div>
       <div className="form_image_container">
